@@ -1,0 +1,24 @@
+Started by user admin
+Building in workspace /var/lib/jenkins/jobs/todo-test-app-build-promote/workspace
+Promoting [8mha:AAAAox+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMiQK2FQ1s/KT9IvyU/J1y1JLS7RTSwo0E0qzcxJ0S0oys8F6tE31AcAiurDOKgAAAA=[0mtodo-test-app-build-promote #1
+
+
+BUILD STEP:  OpenShiftImageTagger in perform
+
+
+
+Auth authToken len 846
+
+OpenShiftImageTagger isNode {"kind" => "ImageStream","apiVersion" => "v1","metadata" => {"name" => "jws-app","namespace" => "jws-app-todo-qa","selfLink" => "/oapi/v1/namespaces/jws-app-todo-qa/imagestreams/jws-app","uid" => "e45f1efa-9d1d-11e5-8f43-525400b36d1d","resourceVersion" => "186193","creationTimestamp" => "2015-12-07T20:05:41Z","labels" => {"application" => "jws-app","name" => "jws-app-todo","template" => "jws30-tomcat8-mysql-persistent-s2i","xpaas" => "1.1.0"},"annotations" => {"openshift.io/generated-by" => "OpenShiftNewApp","openshift.io/image.dockerRepositoryCheck" => "2015-12-07T20:05:41Z"}},"spec" => {},"status" => {"dockerImageRepository" => "172.30.155.167:5000/jws-app-todo-qa/jws-app","tags" => [{"tag" => "latest","items" => [{"created" => "2015-12-07T22:54:55Z","dockerImageReference" => "172.30.155.167:5000/jws-app-todo-qa/jws-app@sha256:e98cb58731089c6545fa05066403de54168304d1b4758b6230b8ed42582079af","image" => "sha256:e98cb58731089c6545fa05066403de54168304d1b4758b6230b8ed42582079af"},{"created" => "2015-12-07T20:07:57Z","dockerImageReference" => "172.30.155.167:5000/jws-app-todo-qa/jws-app@sha256:58b2fb00ec7f1c20f8df877f102569729a9c5714284e6ad325d762fcb0ba478f","image" => "sha256:58b2fb00ec7f1c20f8df877f102569729a9c5714284e6ad325d762fcb0ba478f"}]}]}}
+
+OpenShiftImageTagger isTags after [{"name" => "promote","from" => {"kind" => "ImageStreamTag","name" => "jws-app:latest"}}]
+
+OpenShiftImageTagger PUT URI /oapi/v1/namespaces/jws-app-todo-qa/imagestreams/jws-app
+
+OpenShiftImageTagger REST PUT response {"kind":"ImageStream","apiVersion":"v1","metadata":{"name":"jws-app","namespace":"jws-app-todo-qa","selfLink":"/oapi/v1/namespaces/jws-app-todo-qa/imagestreams/jws-app","uid":"e45f1efa-9d1d-11e5-8f43-525400b36d1d","resourceVersion":"186281","creationTimestamp":"2015-12-07T20:05:41Z","labels":{"application":"jws-app","name":"jws-app-todo","template":"jws30-tomcat8-mysql-persistent-s2i","xpaas":"1.1.0"},"annotations":{"openshift.io/generated-by":"OpenShiftNewApp","openshift.io/image.dockerRepositoryCheck":"2015-12-07T20:05:41Z"}},"spec":{"tags":[{"name":"promote","from":{"kind":"ImageStreamTag","name":"jws-app:latest"}}]},"status":{"dockerImageRepository":"172.30.155.167:5000/jws-app-todo-qa/jws-app","tags":[{"tag":"latest","items":[{"created":"2015-12-07T22:54:55Z","dockerImageReference":"172.30.155.167:5000/jws-app-todo-qa/jws-app@sha256:e98cb58731089c6545fa05066403de54168304d1b4758b6230b8ed42582079af","image":"sha256:e98cb58731089c6545fa05066403de54168304d1b4758b6230b8ed42582079af"},{"created":"2015-12-07T20:07:57Z","dockerImageReference":"172.30.155.167:5000/jws-app-todo-qa/jws-app@sha256:58b2fb00ec7f1c20f8df877f102569729a9c5714284e6ad325d762fcb0ba478f","image":"sha256:58b2fb00ec7f1c20f8df877f102569729a9c5714284e6ad325d762fcb0ba478f"}]},{"tag":"promote","items":[{"created":"2015-12-07T22:54:55Z","dockerImageReference":"172.30.155.167:5000/jws-app-todo-qa/jws-app@sha256:e98cb58731089c6545fa05066403de54168304d1b4758b6230b8ed42582079af","image":"sha256:e98cb58731089c6545fa05066403de54168304d1b4758b6230b8ed42582079af"}]}]}}
+
+
+
+BUILD STEP EXIT:  OpenShiftImageTagger image stream now has tags: jws-app:latest, jws-app:promote
+build com.openshift.openshiftjenkinsbuildutils.OpenShiftImageTagger@1aad1d3c SUCCESS
+Finished: SUCCESS

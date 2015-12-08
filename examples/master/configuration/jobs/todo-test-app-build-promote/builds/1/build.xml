@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserIdCause>
+          <userId>admin</userId>
+        </hudson.model.Cause_-UserIdCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2">
+      <queuingDurationMillis>132</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@1.92.1">
+      <build class="build" reference="../../.."/>
+    </org.jenkinsci.plugins.envinject.EnvInjectPluginAction>
+    <hudson.plugins.promoted__builds.PromotedBuildAction plugin="promoted-builds@2.23">
+      <owner class="build" reference="../../.."/>
+      <statuses>
+        <hudson.plugins.promoted__builds.Status>
+          <name>Deploy</name>
+          <badges>
+            <hudson.plugins.promoted__builds.conditions.ManualCondition_-Badge>
+              <authenticationName>admin</authenticationName>
+              <values/>
+            </hudson.plugins.promoted__builds.conditions.ManualCondition_-Badge>
+          </badges>
+          <timestamp>
+            <time>1449528985587</time>
+            <timezone>UTC</timezone>
+          </timestamp>
+          <promotion>1</promotion>
+          <promotionAttempts>
+            <int>1</int>
+          </promotionAttempts>
+        </hudson.plugins.promoted__builds.Status>
+      </statuses>
+    </hudson.plugins.promoted__builds.PromotedBuildAction>
+    <hudson.plugins.promoted__builds.conditions.ManualCondition_-ManualApproval plugin="promoted-builds@2.23">
+      <name>Deploy</name>
+      <badge reference="../../hudson.plugins.promoted__builds.PromotedBuildAction/statuses/hudson.plugins.promoted__builds.Status/badges/hudson.plugins.promoted__builds.conditions.ManualCondition_-Badge"/>
+    </hudson.plugins.promoted__builds.conditions.ManualCondition_-ManualApproval>
+  </actions>
+  <queueId>3</queueId>
+  <timestamp>1449528717950</timestamp>
+  <startTime>1449528717951</startTime>
+  <result>SUCCESS</result>
+  <duration>188561</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/jobs/todo-test-app-build-promote/workspace</workspace>
+  <hudsonVersion>1.609</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

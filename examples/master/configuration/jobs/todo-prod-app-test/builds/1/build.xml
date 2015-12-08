@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserIdCause>
+          <userId>admin</userId>
+        </hudson.model.Cause_-UserIdCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2">
+      <queuingDurationMillis>8</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@1.92.1">
+      <build class="build" reference="../../.."/>
+    </org.jenkinsci.plugins.envinject.EnvInjectPluginAction>
+    <com.openshift.openshiftjenkinsbuildutils.ImageStreamRevisionState plugin="openshift-jenkins-buildutils@1.0-SNAPSHOT">
+      <commitId>sha256:e98cb58731089c6545fa05066403de54168304d1b4758b6230b8ed42582079af</commitId>
+    </com.openshift.openshiftjenkinsbuildutils.ImageStreamRevisionState>
+  </actions>
+  <queueId>5</queueId>
+  <timestamp>1449537752965</timestamp>
+  <startTime>1449537752987</startTime>
+  <result>SUCCESS</result>
+  <duration>438</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/jobs/todo-prod-app-test/workspace</workspace>
+  <hudsonVersion>1.609</hudsonVersion>
+  <scm class="hudson.scm.CVSChangeLogParser" plugin="cvs@2.11"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.promoted__builds.Promotion plugin="promoted-builds@2.23">
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters/>
+    </hudson.model.ParametersAction>
+    <hudson.plugins.promoted__builds.PromotionTargetAction>
+      <jobName>todo-test-app-build-promote</jobName>
+      <number>1</number>
+    </hudson.plugins.promoted__builds.PromotionTargetAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserCause>
+          <authenticationName>admin</authenticationName>
+        </hudson.model.Cause_-UserCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2">
+      <queuingDurationMillis>127</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+  </actions>
+  <queueId>4</queueId>
+  <timestamp>1449528985810</timestamp>
+  <startTime>1449528985825</startTime>
+  <result>SUCCESS</result>
+  <duration>813</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/jobs/todo-test-app-build-promote/workspace</workspace>
+  <hudsonVersion>1.609</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</hudson.plugins.promoted__builds.Promotion>

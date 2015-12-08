@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.promoted__builds.PromotionProcess plugin="promoted-builds@2.23">
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <conditions>
+    <hudson.plugins.promoted__builds.conditions.ManualCondition>
+      <users></users>
+      <parameterDefinitions/>
+    </hudson.plugins.promoted__builds.conditions.ManualCondition>
+  </conditions>
+  <icon>star-green</icon>
+  <buildSteps>
+    <com.openshift.openshiftjenkinsbuildutils.OpenShiftImageTagger plugin="openshift-jenkins-buildutils@1.0-SNAPSHOT">
+      <apiURL>https://ose31-master.hosts.foo.com:8443</apiURL>
+      <testTag>jws-app:latest</testTag>
+      <prodTag>jws-app:promote</prodTag>
+      <nameSpace>jws-app-todo-qa</nameSpace>
+      <authToken>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImplbmtpbnMtdG9rZW4tZTFraHMiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiamVua2lucyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6Ijg4YjMzODQ0LTkyODYtMTFlNS05NmRhLTUyNTQwMGIzNmQxZCIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmplbmtpbnMifQ.MaR2q6b8SHj87EFMIr-VpQsxhtAmRK_L-H-ZU0G8goQf1BKKtcQkq1m714fl4q5BsqiCNQ46EvNMwDIbqp1xlkZnpJOmNYVgCgoHkK9tYWnq2-pdJhiy_O9r3mCI27miJIR8EKhWGCCqcTU7upBZjCHmriZ2rtlp3R4hjXVN6qdKQhVNiHGUWJyrP0l-cdUdxwNXD1VlxhbsW9qoVfyf572xpMpSPzigsLzSsMD-EEcfCc2zg1zQAyJp8mN3ikhcYL86rg8lw9LN98GYYPZRJGj0FrfaByXJ2ZQXKlvC1ODocGD4dnHS4XHbcp4-OqV2ZchncZ369-CH48wG4RVq-g</authToken>
+      <verbose>true</verbose>
+    </com.openshift.openshiftjenkinsbuildutils.OpenShiftImageTagger>
+  </buildSteps>
+</hudson.plugins.promoted__builds.PromotionProcess>
